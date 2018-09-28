@@ -21,3 +21,12 @@ Dotnet apis have an in-built http server for web code, mostly (but not entirely)
 For end-user convience, I added a nuget package that publishes and consumes a SwaggerDoc, which is a API explorer that allows for some nice automation (for example, getting Angular servies to consume the API for a frontend).
 
 If you are running the application in docker, the url is http://localhost:8080/swagger, otherwise, it'd be on the direct http://localhot:5000/swagger link. Example `curl` commands are included.
+
+
+### Next Steps
+
+If I was going through a through producitonizing of the application, I'd think about adding the following:
+
+- Jenkinsfile for automating build and deploy
+- ECS or Kubernetes service/task to run in a cluster
+- Newman API automation for happy-sad black box tests (I've done an example of this in another public repo https://github.com/Zacharias/devops-project)
