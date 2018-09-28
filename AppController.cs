@@ -71,7 +71,7 @@ namespace state_server
                 }
             }
 
-            return Ok("okay");
+            return Ok(matchingstate);
         }
     }
 }
