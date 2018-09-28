@@ -1,0 +1,18 @@
+version: '3.5'
+
+services:
+    state-server:
+        image: state-server
+        build:
+            context: .
+        ports:
+            - '5000'
+    state-server-proxy:
+        image: state-server-proxy
+        build:
+            context: ./nginx/
+            dockerfile: ./nginx.dockerfile
+        ports:
+            - '8080:80'
+        links :
+            - state-server

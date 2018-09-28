@@ -6,7 +6,7 @@ public class StateDTO
     public double[][] border { get; set; }
 }
 
-//the reference 
+//the reference algo really likes these PointF objects.
 public class PointF
 {
     public double X { get; set; }

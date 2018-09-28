@@ -31,6 +31,8 @@ namespace state_server
         //shoutout to http://alienryderflex.com/polygon/ for a great walkthrough of a point-in-polygon example
         //short version, if a ray drawn from the point we're testing breaks an odd amount of edges, it's within the polygon
         [HttpPost]
+        [ProducesResponseType(typeof(string), 200)]
+        [ProducesResponseType(typeof(BadRequestResult), 400)]
         public async Task<IActionResult> Post([FromBody]InputObject inputObj)
         {
             double inputlatitude;

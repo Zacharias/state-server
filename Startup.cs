@@ -35,7 +35,7 @@ namespace state_server
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "State Server", Version = "v1" });
             });
         }
 
@@ -53,7 +53,7 @@ namespace state_server
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "State Server API");
             });
 
             //https is good, you should use it
