@@ -6,11 +6,13 @@ This application is designed to run as a standalone dotnet app (with the appropi
 
 #### Method 1. Docker
 
-Easiest way to build/run this application is run `docker-compose up --build`. 
+Easiest way to build/run this application is run `docker-compose up --build`.
 
 If you don't have compose (but have Docker somehow, which is getting more edge-casey by the version), you can run `docker build -t stateserver .` and `docker run stateserver:latest -p 8080:5000` to get a locally-running copy from there.
 
 The compose copy includes an nginx frontend container, which is a nod towards "productionizing" the application.
+
+ *Note: These dockerfiles requires running a version of Docker later than 17.06, as it uses multi-stage builds. See https://docs.docker.com/develop/develop-images/multistage-build/ for more information.*
 
 #### Method 2. dotnet
 
